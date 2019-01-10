@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">JavaTpoint1</string>
+    <string name="this_is_portrait">This is portrait</string>
+    <string name="landscape">Landscape</string>
+    <string name="portrait">Portrait</string>
+</resources>
