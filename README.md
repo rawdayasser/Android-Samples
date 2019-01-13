@@ -1,3 +1,3 @@
-# AndroidTests
-Android Test based on JavaTpoint Tutorial
-# AndroidTests
+# Android
+Android Examples I have created it to study Android...
+It is based on JavaTpoint Tutorial https://www.javatpoint.com/android-tutorial
