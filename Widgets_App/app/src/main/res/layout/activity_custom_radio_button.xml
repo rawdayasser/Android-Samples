@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CustomRadioButton">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/custom_radio_buttons"
+        android:fontFamily="cursive"
+        android:textSize="30dp"
+        android:textColor="#620F96"
+        android:layout_gravity="center"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:id="@+id/radio_group"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/female_radio_button"
+            android:text="@string/female"
+            android:paddingLeft="3dp"
+            android:button="@drawable/radio_button"
+            android:layout_marginBottom="12dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_button"
+            android:id="@+id/male_radio_button"
+            android:text="@string/male"
+            android:paddingLeft="3dp"
+            />
+    </RadioGroup>
+</LinearLayout>

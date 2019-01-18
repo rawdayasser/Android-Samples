@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CustomCheckBox">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Box 1"
+        android:padding="3dp"
+        android:layout_margin="12dp"
+        android:id="@+id/checkbox1"
+        android:button="@drawable/checkbox"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Box 1"
+        android:layout_margin="12dp"
+        android:padding="3dp"
+        android:id="@+id/checkbox2"
+        android:button="@drawable/checkbox"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Box 1"
+        android:layout_margin="12dp"
+        android:padding="3dp"
+        android:id="@+id/checkbox3"
+        android:button="@drawable/checkbox"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_margin="12dp"
+        android:padding="4dp"
+        android:layout_gravity="center"
+        android:background="#f749a6"
+        android:shadowColor="#635f5f"
+        android:textColor="#484646"
+        android:id="@+id/submit_button"
+        />
+</LinearLayout>

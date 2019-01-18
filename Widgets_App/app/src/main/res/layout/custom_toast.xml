@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CustomToastActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toggle Button"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:fontFamily="cursive"
+        android:id="@+id/toggle_button_checkbox"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Show"
+        android:textSize="20sp"
+        android:id="@+id/show_custom_button"
+        android:layout_below="@id/toggle_button_checkbox"
+        />
+</RelativeLayout>

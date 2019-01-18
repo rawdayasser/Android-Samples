@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rawda.widgets_app">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ButtonActivity"
+            android:label="Button" />
+        <activity
+            android:name=".CustomToastActivity"
+            android:label="Custom Toast" />
+        <activity
+            android:name=".ToggleButtonActivity"
+            android:label="Toggle Button" />
+        <activity
+            android:name=".SwitchActivity"
+            android:label="Switch" />
+        <activity
+            android:name=".CheckBoxActivity"
+            android:label="Check Box" />
+        <activity
+            android:name=".CustomCheckBox"
+            android:label="Custom Check Box" />
+        <activity
+            android:name=".RadioButtonActivity"
+            android:label="Radio Button" />
+        <activity
+            android:name=".DynamicRadioButtonActivity"
+            android:label="Dynamic Radio Button" />
+        <activity
+            android:name=".CustomRadioButton"
+            android:label="Custom Radio Button" />
+        <activity
+            android:name=".AlertDialogActivity"
+            android:label="Alert Dialog" />
+        <activity android:name=".AutoCompleteTextViewActivity" />
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".CustomListViewActivity" />
+        <activity android:name=".RatingBarActivity" />
+        <activity android:name=".WebViewActivity"></activity>
+    </application>
+
+</manifest>

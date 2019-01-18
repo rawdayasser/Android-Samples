@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="Widgets"
+                android:textSize="30sp"
+                android:paddingLeft="12dp"
+                android:fontFamily="cursive"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/buttons_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom Toast Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/custom_toast_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toggle Button Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/toggle_button_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Switch Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/switch_button_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checkbox Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/checkbox_button_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom Checkbox Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/custom_checkbox_button_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Radio Button Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/radio_button_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dynamic Radio Button Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/dynamic_radio_button_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom Radio Button Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/custom_radio_button_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alert Dialog Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/alert_dialog_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spinner Activity"
+                android:layout_margin="10dp"
+                android:id="@+id/spinner_go"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AutoCompleteTextView Activity"
+                android:id="@+id/autocompletetextview_go"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/listview_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="List View Activity" />
+
+            <Button
+                android:id="@+id/custom_listview_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Custom List View Activity" />
+            <Button
+                android:id="@+id/rating_bar_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Rating Bar Activity" />
+            <Button
+                android:id="@+id/web_view_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Web View Activity" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

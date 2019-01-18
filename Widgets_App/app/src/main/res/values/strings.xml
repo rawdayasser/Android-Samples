@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Widgets</string>
+    <string name="nothing_selected">Nothing Selected</string>
+    <string name="show">Show</string>
+    <string name="female">female</string>
+    <string name="male">male</string>
+    <string name="custom_radio_buttons">Custom Radio Buttons</string>
+    <string name="close_app">Close App</string>
+    <string name="close_app_question">Do you want to close this App?</string>
+    <string name="choose_programming_language">Choose your Programming Language</string>
+    <string name="submit">Submit</string>
+    <string-array name="technology_array">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Android Development</item>
+        <item>HTML5</item>
+        <item>CSS3</item>
+        <item>Javascript</item>
+        <item>Web Development</item>
+        <item>PHP</item>
+        <item>Python</item>
+        <item>C++</item>
+        <item>C</item>
+        <item>C#</item>
+        <item>Julia</item>
+        <item>Lisp</item>
+    </string-array>
+</resources>
