@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ImageSwitcherActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/image_switcher_example"
+        android:fontFamily="cursive"
+        android:id="@+id/text_view"
+        android:textSize="25dp"
+        android:layout_margin="12dp"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout"
+        android:layout_margin="70dp"
+        android:layout_below="@id/text_view"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_left" />
+        <ImageSwitcher
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/image_switcher"
+           />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_right" />
+
+    </LinearLayout>
+</RelativeLayout>

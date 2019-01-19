@@ -9,6 +9,11 @@
     <string name="close_app_question">Do you want to close this App?</string>
     <string name="choose_programming_language">Choose your Programming Language</string>
     <string name="submit">Submit</string>
+    <string name="image_switcher_example">Image Switcher Example</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="image_slider_example">Image Slider Example</string>
+    <string name="hide">hide</string>
     <string-array name="technology_array">
         <item>Java</item>
         <item>Kotlin</item>

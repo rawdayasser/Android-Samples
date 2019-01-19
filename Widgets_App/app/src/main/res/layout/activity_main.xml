@@ -132,7 +132,30 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Web View Activity" />
-
+            <Button
+                android:id="@+id/horizontal_scrollview_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Horizontal Scroll View Activity" />
+            <Button
+                android:id="@+id/image_switcher_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Image Switcher Activity" />
+            <Button
+                android:id="@+id/image_slider_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Image Slider Activity" />
+            <Button
+                android:id="@+id/view_stub_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="View Stub Activity" />
         </LinearLayout>
     </ScrollView>
 

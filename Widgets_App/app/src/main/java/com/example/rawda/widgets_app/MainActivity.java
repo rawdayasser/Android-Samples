@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button customListViewButton;
     private Button ratingBarButton;
     private Button webViewButton;
+    private Button horizontalScrollButton;
+    private Button imageSwitcherButton;
+    private Button imageSliderButton;
+    private Button viewStubButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         customListViewButton = findViewById(R.id.custom_listview_go);
         ratingBarButton = findViewById(R.id.rating_bar_go);
         webViewButton = findViewById(R.id.web_view_go);
+        horizontalScrollButton = findViewById(R.id.horizontal_scrollview_go);
+        imageSwitcherButton = findViewById(R.id.image_switcher_go);
+        imageSliderButton = findViewById(R.id.image_slider_go);
+        viewStubButton = findViewById(R.id.view_stub_go);
 
         addButton.setOnClickListener(this);
         customToastButton.setOnClickListener(this);
@@ -60,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         customListViewButton.setOnClickListener(this);
         ratingBarButton.setOnClickListener(this);
         webViewButton.setOnClickListener(this);
+        horizontalScrollButton.setOnClickListener(this);
+        imageSwitcherButton.setOnClickListener(this);
+        imageSliderButton.setOnClickListener(this);
+        viewStubButton.setOnClickListener(this);
     }
 
     @Override
@@ -132,7 +144,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, WebViewActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.horizontal_scrollview_go:
+                intent = new Intent(this, HorizontalScrollViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.image_switcher_go:
+                intent = new Intent(this, ImageSwitcherActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.image_slider_go:
+                intent = new Intent(this, ImageSliderActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.view_stub_go:
+                intent = new Intent(this, ViewStubActivity.class);
+                startActivity(intent);
+                break;
 
         }
     }
