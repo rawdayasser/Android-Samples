@@ -17,7 +17,7 @@ public class CustomListViewActivity extends AppCompatActivity implements Adapter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_list_view);
-        listView = findViewById(R.id.custom_listview);
+        listView = findViewById(R.id.listview);
         adapter = new MyListAdapter(this, images, titles, subtitles);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);

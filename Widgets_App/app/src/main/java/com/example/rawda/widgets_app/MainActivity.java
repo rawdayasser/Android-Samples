@@ -1,166 +1,143 @@
 package com.example.rawda.widgets_app;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button addButton;
-    private Button customToastButton;
-    private Button toggleButton;
-    private Button switchButton;
-    private Button checkboxButton;
-    private Button customCheckboxButton;
-    private Button radioButton;
-    private Button dynamicRadioButton;
-    private Button customRadioButton;
-    private Button alertDialogButton;
-    private Button spannerButton;
-    private Button autoCompleteTextViewButton;
-    private Button listViewButton;
-    private Button customListViewButton;
-    private Button ratingBarButton;
-    private Button webViewButton;
-    private Button horizontalScrollButton;
-    private Button imageSwitcherButton;
-    private Button imageSliderButton;
-    private Button viewStubButton;
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity{
+    private ListView listView;
+    private ArrayList<String> buttonText;
+    private ArrayList<Class> activity;
+    //private SearchView searchView;
+    private EditText editText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addButton = findViewById(R.id.buttons_go);
-        customToastButton = findViewById(R.id.custom_toast_go);
-        toggleButton = findViewById(R.id.toggle_button_go);
-        switchButton = findViewById(R.id.switch_button_go);
-        checkboxButton = findViewById(R.id.checkbox_button_go);
-        customCheckboxButton = findViewById(R.id.custom_checkbox_button_go);
-        radioButton = findViewById(R.id.radio_button_go);
-        dynamicRadioButton = findViewById(R.id.dynamic_radio_button_go);
-        customRadioButton = findViewById(R.id.custom_radio_button_go);
-        alertDialogButton = findViewById(R.id.alert_dialog_go);
-        spannerButton = findViewById(R.id.spinner_go);
-        autoCompleteTextViewButton = findViewById(R.id.autocompletetextview_go);
-        listViewButton = findViewById(R.id.listview_go);
-        customListViewButton = findViewById(R.id.custom_listview_go);
-        ratingBarButton = findViewById(R.id.rating_bar_go);
-        webViewButton = findViewById(R.id.web_view_go);
-        horizontalScrollButton = findViewById(R.id.horizontal_scrollview_go);
-        imageSwitcherButton = findViewById(R.id.image_switcher_go);
-        imageSliderButton = findViewById(R.id.image_slider_go);
-        viewStubButton = findViewById(R.id.view_stub_go);
+        listView = findViewById(R.id.main_list_view);
+        //searchView = findViewById(R.id.search_view);
+        editText = findViewById(R.id.main_edit_text);
+        activity = new ArrayList<>();
+        buttonText = new ArrayList<>();
+        loadActivity();
+        loadButtonText();
+        final MainArrayAdapter adapter = new MainArrayAdapter(this, buttonText, activity);
+       // final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, buttonText);
+        listView.setAdapter(adapter);
+        listView.setTextFilterEnabled(true);
+        //searchView.setIconifiedByDefault(false);
+        //searchView.setSubmitButtonEnabled(true);
+        adapter.notifyDataSetChanged();
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+           //     Toast.makeText(getApplicationContext(), "before Text Changed", Toast.LENGTH_SHORT).show();
+            }
 
-        addButton.setOnClickListener(this);
-        customToastButton.setOnClickListener(this);
-        toggleButton.setOnClickListener(this);
-        switchButton.setOnClickListener(this);
-        checkboxButton.setOnClickListener(this);
-        customCheckboxButton.setOnClickListener(this);
-        radioButton.setOnClickListener(this);
-        dynamicRadioButton.setOnClickListener(this);
-        customRadioButton.setOnClickListener(this);
-        alertDialogButton.setOnClickListener(this);
-        spannerButton.setOnClickListener(this);
-        autoCompleteTextViewButton.setOnClickListener(this);
-        listViewButton.setOnClickListener(this);
-        customListViewButton.setOnClickListener(this);
-        ratingBarButton.setOnClickListener(this);
-        webViewButton.setOnClickListener(this);
-        horizontalScrollButton.setOnClickListener(this);
-        imageSwitcherButton.setOnClickListener(this);
-        imageSliderButton.setOnClickListener(this);
-        viewStubButton.setOnClickListener(this);
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                adapter.getFilter().filter(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+              //  adapter.getFilter().filter(editable);
+               // Toast.makeText(getApplicationContext(), "After Text Changed", Toast.LENGTH_SHORT).show();
+            }
+        });
+       /* searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                //   adapter.afterFilter();
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });*/
     }
-
-    @Override
-    public void onClick(View view) {
-        Intent intent;
-        int id = view.getId();
-
-        switch (id){
-            case R.id.buttons_go:
-                intent = new Intent(this, ButtonActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.custom_toast_go:
-                intent = new Intent(this, CustomToastActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.toggle_button_go:
-                intent = new Intent(this, ToggleButtonActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.switch_button_go:
-                intent = new Intent(this, SwitchActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.checkbox_button_go:
-                intent = new Intent(this, CheckBoxActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.custom_checkbox_button_go:
-                intent = new Intent(this, CustomCheckBox.class);
-                startActivity(intent);
-                break;
-            case R.id.radio_button_go:
-                intent = new Intent(this, RadioButtonActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.dynamic_radio_button_go:
-                intent = new Intent(this, DynamicRadioButtonActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.custom_radio_button_go:
-                intent = new Intent(this, CustomRadioButton.class);
-                startActivity(intent);
-                break;
-            case R.id.alert_dialog_go:
-                intent = new Intent(this, AlertDialogActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.spinner_go:
-                intent = new Intent(this, SpinnerActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.autocompletetextview_go:
-                intent = new Intent(this, AutoCompleteTextViewActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.listview_go:
-                intent = new Intent(this, ListViewActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.custom_listview_go:
-                intent = new Intent(this, CustomListViewActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.rating_bar_go:
-                intent = new Intent(this, RatingBarActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.web_view_go:
-                intent = new Intent(this, WebViewActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.horizontal_scrollview_go:
-                intent = new Intent(this, HorizontalScrollViewActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.image_switcher_go:
-                intent = new Intent(this, ImageSwitcherActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.image_slider_go:
-                intent = new Intent(this, ImageSliderActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.view_stub_go:
-                intent = new Intent(this, ViewStubActivity.class);
-                startActivity(intent);
-                break;
-
+    private void loadButtonText(){
+        for (int i = 0; i < activity.size(); i++) {
+            buttonText.add(activity.get(i).getSimpleName());
+            Log.d(MainActivity.class.getSimpleName(), activity.get(i).getSimpleName());
         }
     }
+    private void loadActivity(){
+        activity.add(AlertDialogActivity.class);
+        activity.add(Analog_Digital_TimeActivity.class);
+        activity.add(AutoCompleteTextViewActivity.class);
+        activity.add(ButtonActivity.class);
+        activity.add(CheckBoxActivity.class);
+        activity.add(CustomCheckBoxActivity.class);
+        activity.add(CustomListViewActivity.class);
+        activity.add(CustomRadioButton.class);
+        activity.add(CustomToastActivity.class);
+        activity.add(DatePickerActivity.class);
+        activity.add(AlertDialogActivity.class);
+        activity.add(DynamicRadioButtonActivity.class);
+        activity.add(CustomToastActivity.class);
+        activity.add(DatePickerActivity.class);
+        activity.add(HorizontalScrollViewActivity.class);
+        activity.add(ImageSwitcherActivity.class);
+        activity.add(ImageSliderActivity.class);
+        activity.add(ListViewActivity.class);
+        activity.add(ProgressBarActivity.class);
+        activity.add(RadioButtonActivity.class);
+        activity.add(RatingBarActivity.class);
+        activity.add(SeekBarActivity.class);
+        activity.add(SpinnerActivity.class);
+        activity.add(SwitchActivity.class);
+        activity.add(TabLayout1_Activity.class);
+        activity.add(TimePickerActivity.class);
+        activity.add(ToggleButtonActivity.class);
+        activity.add(ViewStubActivity.class);
+        activity.add(WebViewActivity.class);
+        activity.add(TabLayout1_Activity.class);
+        activity.add(TabLayout2_Activity.class);
+    }
 }
+
+/*
+        buttonText.add(AlertDialogActivity.class.getSimpleName());
+        buttonText.add(Analog_Digital_TimeActivity.class.getSimpleName());
+        buttonText.add(AutoCompleteTextViewActivity.class.getSimpleName());
+        buttonText.add(ButtonActivity.class.getSimpleName());
+        buttonText.add(CheckBoxActivity.class.getSimpleName());
+        buttonText.add(CustomCheckBoxActivity.class.getSimpleName());
+        buttonText.add(CustomListViewActivity.class.getSimpleName());
+        buttonText.add(CustomRadioButton.class.getSimpleName());
+        buttonText.add(CustomToastActivity.class.getSimpleName());
+        buttonText.add(DatePickerActivity.class.getSimpleName());
+        buttonText.add(AlertDialogActivity.class.getSimpleName());
+        buttonText.add(DynamicRadioButtonActivity.class.getSimpleName());
+        buttonText.add(CustomToastActivity.class.getSimpleName());
+        buttonText.add(DatePickerActivity.class.getSimpleName());
+        buttonText.add(HorizontalScrollViewActivity.class.getSimpleName());
+        buttonText.add(ImageSwitcherActivity.class.getSimpleName());
+        buttonText.add(ImageSliderActivity.class.getSimpleName());
+        buttonText.add(ListViewActivity.class.getSimpleName());
+        buttonText.add(ProgressBarActivity.class.getSimpleName());
+        buttonText.add(RadioButtonActivity.class.getSimpleName());
+        buttonText.add(RatingBarActivity.class.getSimpleName());
+        buttonText.add(SeekBarActivity.class.getSimpleName());
+        buttonText.add(SpinnerActivity.class.getSimpleName());
+        buttonText.add(SwitchActivity.class.getSimpleName());
+        buttonText.add(TabLayout1_Activity.class.getSimpleName());
+        buttonText.add(TimePickerActivity.class.getSimpleName());
+        buttonText.add(ToggleButtonActivity.class.getSimpleName());
+        buttonText.add(ViewStubActivity.class.getSimpleName());
+        buttonText.add(WebViewActivity.class.getSimpleName());
+        */

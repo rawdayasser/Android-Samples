@@ -15,7 +15,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
-        listView = findViewById(R.id.custom_listview);
+        listView = findViewById(R.id.listview);
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
                 getResources().getStringArray(R.array.technology_array));
         listView.setAdapter(arrayAdapter);

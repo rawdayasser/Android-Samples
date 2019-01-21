@@ -34,7 +34,7 @@
             android:name=".CheckBoxActivity"
             android:label="Check Box" />
         <activity
-            android:name=".CustomCheckBox"
+            android:name=".CustomCheckBoxActivity"
             android:label="Custom Check Box" />
         <activity
             android:name=".RadioButtonActivity"
@@ -57,7 +57,14 @@
         <activity android:name=".HorizontalScrollViewActivity" />
         <activity android:name=".ImageSwitcherActivity" />
         <activity android:name=".ImageSliderActivity" />
-        <activity android:name=".ViewStubActivity"></activity>
+        <activity android:name=".ViewStubActivity" />
+        <activity android:name=".SeekBarActivity" />
+        <activity android:name=".DatePickerActivity" />
+        <activity android:name=".TimePickerActivity" />
+        <activity android:name=".Analog_Digital_TimeActivity" />
+        <activity android:name=".ProgressBarActivity" />
+        <activity android:name=".TabLayout1_Activity" />
+        <activity android:name=".TabLayout2_Activity"></activity>
     </application>
 
 </manifest>

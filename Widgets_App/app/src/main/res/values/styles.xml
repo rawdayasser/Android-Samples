@@ -7,7 +7,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="FontTheme" >
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.NoActionBar"></style>
 
     <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.NoActionBar"></style>

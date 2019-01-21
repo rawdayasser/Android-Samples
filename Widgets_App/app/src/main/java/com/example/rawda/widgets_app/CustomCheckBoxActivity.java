@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-public class CustomCheckBox extends AppCompatActivity implements View.OnClickListener{
+public class CustomCheckBoxActivity extends AppCompatActivity implements View.OnClickListener{
     private Button submit;
     private CheckBox checkBox1, checkBox2, checkBox3;
     @Override
