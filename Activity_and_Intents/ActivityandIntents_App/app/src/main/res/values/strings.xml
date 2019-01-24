@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ActivityandIntents_App</string>
+    <string name="activity_lifecycle">Activity Lifecycle</string>
+    <string name="first_activity">First Activity</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="share_app">Share App</string>
+    <string name="share_app_data">Share App Data</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment1">Hello Fragment 1</string>
+    <string name="hello_blank_fragment2">Hello Fragment2</string>
+</resources>
