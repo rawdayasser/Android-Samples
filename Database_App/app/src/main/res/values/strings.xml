@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Database_App</string>
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="next_page">Next Page</string>
+    <string name="start">start</string>
+</resources>
