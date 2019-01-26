@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.rawda.database_app"
+        applicationId "com.example.rawda.database_apps"
         minSdkVersion 17
         targetSdkVersion 27
         versionCode 1
@@ -16,7 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets { main { java.srcDirs = ['src/main/java', 'src/main/java/Adapters'] } }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java/Adapters']
+} }
 }
 
 dependencies {

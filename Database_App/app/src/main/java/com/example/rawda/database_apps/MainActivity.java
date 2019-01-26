@@ -1,4 +1,4 @@
-package com.example.rawda.database_app;
+package com.example.rawda.database_apps;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

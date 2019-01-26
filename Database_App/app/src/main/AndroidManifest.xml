@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rawda.database_app">
-
+    package="com.example.rawda.database_apps">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,30 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.rawda.database_apps.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Services" />
-        <activity android:name=".Alarm_Manager_Activity" />
-        <activity android:name=".Preferences" />
-        <activity android:name=".Internal_Storage" />
-        <activity android:name=".External_Storage" />
-        <activity android:name=".SQLite_Activity" />
-        <activity android:name=".SQLite_Spinner" />
-
+        <activity android:name="com.example.rawda.database_apps.Services" />
+        <activity android:name="com.example.rawda.database_apps.Alarm_Manager_Activity" />
+        <activity android:name="com.example.rawda.database_apps.Preferences" />
+        <activity android:name="com.example.rawda.database_apps.Internal_Storage" />
+        <activity android:name="com.example.rawda.database_apps.External_Storage" />
+        <activity android:name="com.example.rawda.database_apps.SQLite_Activity" />
+        <activity android:name="com.example.rawda.database_apps.SQLite_Spinner" />
+        <activity android:name=".PrefActivity"/>
         <service
-            android:name=".MyService"
+            android:name="com.example.rawda.database_apps.MyService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".NextPage" />
+        <activity android:name="com.example.rawda.database_apps.NextPage" />
 
         <receiver
-            android:name=".MyReceiver"
+            android:name="com.example.rawda.database_apps.MyReceiver"
             android:enabled="true"
             android:exported="true"></receiver>
     </application>

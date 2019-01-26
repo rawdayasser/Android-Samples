@@ -1,4 +1,4 @@
-package com.example.rawda.database_app;
+package com.example.rawda.database_apps;
 
 import android.content.Intent;
 import android.os.Bundle;

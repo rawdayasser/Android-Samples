@@ -1,7 +1,27 @@
 <resources>
-    <string name="app_name">Database_App</string>
+    <string name="app_name">Database Apps</string>
     <string name="start_service">Start Service</string>
     <string name="stop_service">Stop Service</string>
     <string name="next_page">Next Page</string>
     <string name="start">start</string>
+    <string name="show_information">Show Information</string>
+    <string name="store_information">Store Information</string>
+    <string name="shared_preferences">Shared Preferences</string>
+    <string name="data">Data :</string>
+    <string name="filename">FileName : </string>
+    <string name="data_normal">Data</string>
+    <string name="save_normal">save</string>
+    <string name="add_item">Add Item</string>
+
+    <array name="list_options">
+        <item>English</item>
+        <item>French</item>
+        <item>Other</item>
+    </array>
+
+    <array name="list_values">
+        <item>English Language</item>
+        <item>French Language</item>
+        <item>Other Language</item>
+    </array>
 </resources>

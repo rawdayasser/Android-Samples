@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 
-import com.example.rawda.database_app.R;
+import com.example.rawda.database_apps.R;
 
 import java.util.ArrayList;
 
