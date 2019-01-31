@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Menu App</string>
+    <string name="settings">settings</string>
+    <string name="favorites">favorites</string>
+    <string name="welcome">Welcome</string>
+    <string name="activity">activity</string>
+    <string name="title_activity_basic">BasicActivity</string>
+    <string name="title_activity_popup_menu">Popup_menu</string>
+    <string name="button">Button</string>
+</resources>
